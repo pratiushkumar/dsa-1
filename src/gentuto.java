@@ -12,6 +12,7 @@ public class gentuto<T> {
         gentuto t = new gentuto();
         t.setT(10);
        System.out.println(t.getT());
+       System.out.println("hello");
 
     }
 }
