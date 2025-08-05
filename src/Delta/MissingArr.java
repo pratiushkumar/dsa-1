@@ -1,25 +1,28 @@
 package Delta;
 
+import java.util.Scanner;
+
 public class MissingArr {
-
-    public class MissingElement {
-        public static int findMissing(int[] arr, int n) {
-            // Calculate expected sum of first n numbers
-            int expectedSum = n * (n + 1) / 2;
-
-            // Calculate actual sum of array elements
-            int actualSum = 0;
-            for (int i = 0; i < arr.length; i++) {
-                actualSum += arr[i];
-            }
-
-            // Missing number is the difference
-            return expectedSum - actualSum;
-        }
-
+public static int missingfunc(int n,int[] arr) {
+    int expectedsum = n * (n + 1) / 2;
+    int actualsum = 0;
+    for (int i = 0; i < arr.length; i++) {
+        actualsum = actualsum + i;
+    }
+    return expectedsum - actualsum;
+}
         public static void main(String[] args) {
-            int[] arr = {1, 2, 4, 5}; // Example, n = 5, missing = 3
-            int n = 5;
-            System.out.println("Missing number: " + findMissing(arr, n));
+            Scanner sc  = new Scanner(System.in);
+            System.out.println("enter the number of elements you want ");
+            int elements = sc.nextInt();
+            System.out.print("eneter the elemnts : ");
+            int[] arr =  new int[elements];
+            for(int i=0;i<arr.length; i++) {
+                arr[i] = sc.nextInt();
+            }
+            System.out.println("Enter the total number of elements ");
+            int missing = sc.nextInt();
+            System.out.println("Missing number: "+ missingfunc(elements,arr));
+
         }
     }
