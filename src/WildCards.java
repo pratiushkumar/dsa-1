@@ -10,7 +10,7 @@ public class WildCards {
 
     public static void main(String[] args) {
         List<Integer> initList = List.of(1,2,3,4);
-        print(initList);
+        print(initList);//compile time error
     }
 
 }
